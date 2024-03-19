@@ -1,0 +1,12 @@
+/* CountdownTimer.css */
+
+.countdown-timer {
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .countdown-timer > div {
+    margin-bottom: 10px;
+  }
+  
