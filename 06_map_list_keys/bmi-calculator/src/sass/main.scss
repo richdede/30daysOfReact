@@ -1,0 +1,535 @@
+@use 'resets' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'fonts' as *;
+
+
+.main-page {
+    width: 100%;
+
+    @include minScreenSize($brakepoint-desktop) {
+        max-width: 160rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+        margin: 0 auto;
+    }
+}
+
+.main_page > * {
+    width: 100%;
+}
+
+.intro-section, .suggestion-section, .limitation-section {
+    padding-left: 2.35rem;
+    padding-right: 2.35rem;
+
+    @include minScreenSize($brakepoint-tablet) {
+        padding-left: 4.1rem;
+        padding-right: 4.1rem;
+    }
+}
+
+.article-section, .limitation-section {
+    @include minScreenSize($brakepoint-desktop) {
+        padding-left: min(14rem, 9.5vw);
+        padding-right: min(14rem, 9.5vw);
+    }
+}
+
+.intro-section, .suggestion-section {
+    @include minScreenSize($brakepoint-desktop) {
+        padding-left: min(11.6rem, 8.5%);
+        padding-right: min(11.6rem, 8.5%);
+    }
+}
+
+.intro-section {
+    position: relative;
+    background: map-get($clr, background-gradient-600);
+    padding-top: 3.2rem;
+    padding-bottom: 21.7rem;
+    @include flexCenter(column);
+    gap: 2.4rem;
+    text-align: center;
+    border-radius: 0 0 3.5rem 3.5rem;
+    margin-bottom: 55.2rem;
+
+    @include minScreenSize($brakepoint-tablet) {
+        padding-bottom: 32.6rem;
+        margin-bottom: 27.7rem;
+
+        &__title {
+            width: 50%;
+        }
+    }
+
+    @include minScreenSize($brakepoint-desktop) {
+        @include maxWidth(72%);
+        margin-bottom: 6.5rem;
+        padding-top: 7.5rem;
+        padding-bottom: 20rem;
+        padding-right: 39.7rem;
+        gap: 3.5rem;
+        align-items: flex-start;
+        text-align: left;
+
+        &__title {
+            width: 100%;
+            min-width: 41rem;
+        }
+
+        &__article {
+            width: 100%;
+            min-width: 41rem;
+        }
+    }
+
+    &__logo {
+        @include minScreenSize($brakepoint-tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+.bmi-calculator {
+    position: absolute;
+    top: 72%;
+    z-index: 2;
+    background-color: map-get($clr, primary);
+    border-radius: 1.6rem;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    box-shadow: 16px 32px 56px 0px map-get($clr, shadow-500);
+
+    @include minScreenSize($brakepoint-tablet) {
+        @include maxWidth(68.6rem);
+        top: 60%;
+        padding: 3.2rem;
+        gap: 3.2rem;
+        text-align: left;
+    }
+
+    @include minScreenSize($brakepoint-desktop) {
+        top: 15%;
+        left: min(72%, 50vw);
+        max-width: 60%;
+        min-width: 45rem;
+    }
+
+    &__units {
+        width: 100%;
+        display: flex;
+        gap: 5.3rem;
+
+        @include minScreenSize($brakepoint-tablet) {
+            gap: 2.4rem;
+        }
+    }
+
+    &__results {
+        padding: 3.2rem;
+        background-color: map-get($clr, accent-500);
+        border-radius: 1.6rem;
+        display: flex;
+        gap: .8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        @include minScreenSize($brakepoint-tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 1.6rem 100rem 100rem 1.6rem;
+
+            .result-description {
+                grid-column: 2;
+                grid-row: 1/span 2;
+            }
+        }
+
+        .result-description {
+            margin-top: 2.4rem;
+            text-align: left;
+
+            @include minScreenSize($brakepoint-tablet) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__welcome-section {
+        padding: 3.2rem;
+        background-color: map-get($clr, accent-500);
+        border-radius: 1.6rem;
+        display: flex;
+        gap: .8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        @include minScreenSize($brakepoint-tablet) {
+            border-radius: 1.6rem 100rem 100rem 1.6rem;
+        }
+    }
+}
+
+.radio-input {
+    display: flex;
+    gap: 1.8rem;
+
+    @include minScreenSize($brakepoint-tablet) {
+        flex: 1;
+    }
+}
+
+input[type="radio"] {
+    width: 3.1rem;
+    height: 3.1rem;
+    appearance: none;
+    border-radius: 50%;
+    border: .1rem solid map-get($clr, neutral-800);
+    margin: 0;
+    cursor: pointer;
+}
+
+input[type="radio"]:hover {
+    border: .1rem solid map-get($clr, accent-500);
+}
+
+input[type="radio"]:checked {
+    appearance: none;
+    border-radius: 50%;
+    background-color: map-get($clr, accent-500);
+    border: .8rem solid map-get($clr, accent-500-op);
+}
+
+.bmi-calculator-input-section-metric {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    @include minScreenSize($brakepoint-tablet) {
+        flex-direction: row;
+    }
+
+    &__input {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .8rem;
+
+        &--field {
+            width: 100%;
+            padding: 2rem 2.4rem;
+            border-radius: 1.2rem;
+            border: .1rem solid map-get($clr, neutral-800);
+            display: flex;
+        }
+
+        &--unit {
+            font-size: map-get($fs, fs-l);
+            color: map-get($clr, accent-500);
+            font-weight: $fw-bold;
+            position: absolute;
+            right: 2.4rem;
+            top: 50%;
+        }
+    }
+}
+
+.bmi-calculator-input-section-imperial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &__input {
+        display: grid;
+        justify-items: flex-start;
+        column-gap: 1.6rem;
+        row-gap: .8rem;
+        grid-template-columns: 1fr 1fr;
+
+        &--label {
+            grid-column: span 2;
+        }
+
+        &--field {
+            width: 100%;
+            padding: 2rem 2.4rem;
+            border-radius: 1.2rem;
+            border: .1rem solid map-get($clr, neutral-800);
+        }
+
+        .wraper {
+            position: relative;
+
+            .unit {
+                font-size: map-get($fs, fs-l);
+                color: map-get($clr, accent-500);
+                font-weight: $fw-bold;
+                position: absolute;
+    
+                top: 30%;
+                left: 76%;
+            }
+        }
+    }
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: .1rem solid map-get($clr, accent-500);
+}
+
+.article-section {
+    margin-bottom: 7.16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include minScreenSize($suggestion-section-brakepoint-tablet) {
+        flex-direction: row;
+        gap: 7.5rem;  
+    }
+
+    @include minScreenSize($brakepoint-desktop) { 
+            gap: 2rem;
+            padding-left: 7rem;
+            padding-right: 7rem;
+           margin-bottom: 9.6rem;
+    }
+
+    @include minScreenSize(1165px) { 
+        gap: min(13.1rem, 9vw);
+        padding-left: min(14rem, 9.5vw);
+        padding-right: min(14rem, 9.5vw);
+    }
+
+    .flex-group {
+        padding: 0 2.35rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        @include minScreenSize($brakepoint-desktop) {
+            position: relative;
+            gap: 3.5rem;
+            @include maxWidth(46.5rem);
+        }
+    }
+
+    &__image { 
+        @include maxWidth(37.5rem);
+        margin-bottom: 4.8rem;
+
+        @include minScreenSize($suggestion-section-brakepoint-tablet) {
+            min-width: 40rem;
+            margin-left: -7rem;
+        }
+
+        @include minScreenSize($brakepoint-desktop) { 
+            max-width: 56.4rem;
+            margin-bottom: 0;
+            margin-left: 0; 
+        }
+    }
+
+    &__decorative-line {
+        display: none;
+
+        @include minScreenSize($brakepoint-desktop) {
+            width: min(8.5rem, 6vw); 
+            display: block;
+            position: absolute;
+            top: -60%;
+            right: 0;
+        }
+    }
+}
+
+.suggestion-section {
+    background: map-get($clr, background-gradient-900);
+    padding-top: 5.5rem;
+    padding-bottom: 5.6rem;
+    margin-bottom: 7.2rem;
+
+    @include minScreenSize($brakepoint-tablet) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        margin-bottom: 9.6rem;
+    }
+    @include minScreenSize($brakepoint-desktop) {
+        padding-top: 7.2rem;
+        padding-bottom: 9.6rem;
+        margin-bottom: 12rem;
+        border-radius: 3.5rem;
+    }
+}
+
+.suggestion-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include minScreenSize($brakepoint-desktop) { 
+        gap: 3.2rem;
+        flex-direction: row;
+    }
+
+    &__item {
+
+        h3 {
+            margin-top: 3.2rem;
+            padding-bottom: 2.4rem;
+
+            @include minScreenSize($brakepoint-tablet) {
+                margin-top: 0;
+            }
+            @include minScreenSize($brakepoint-desktop) {
+                margin-top: 4.5rem;
+            }
+        }
+
+        @include minScreenSize($brakepoint-tablet) { 
+            display: grid;
+            align-items: center;
+            column-gap: 4rem;
+            grid-template-columns: 1fr auto;
+        }
+
+        @include minScreenSize($brakepoint-desktop) { 
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__item:nth-of-type(1)::before {
+        content: url(../assets/images/icon-eating.svg);
+        grid-row: 1/ span 2;
+    }
+
+    &__item:nth-of-type(2)::before {
+        content: url(../assets/images/icon-exercise.svg);
+        grid-row: 1/ span 2;
+    }
+
+    &__item:nth-of-type(3)::before {
+        content: url(../assets/images/icon-sleep.svg);
+        grid-row: 1/ span 2;
+    }
+}
+
+.limitation-section {
+    padding-bottom: 9.6rem;
+
+    @include minScreenSize($brakepoint-desktop) {
+        position: relative;
+        padding-bottom: 64rem;
+    }
+
+    .flex-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3.2rem;
+        text-align: center;
+        margin-bottom: 5.6rem;
+
+        @include minScreenSize($brakepoint-desktop) {
+            position: relative;
+            gap: 3.5rem;
+            align-items: flex-start;
+            text-align: left;
+            @include maxWidth(min(56.4rem, 37vw));
+        }
+
+        .limitation-section-decorative-line {
+            display: none;
+
+            @include minScreenSize($brakepoint-desktop) {
+                position: absolute;
+                display: block;
+                bottom: -100%;
+                right: 50%;
+            }
+        }
+    }
+
+    .grid-group {
+        display: grid;
+        gap: 1.6rem;
+
+        @include minScreenSize($brakepoint-tablet) {
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+        }
+
+        @include minScreenSize($brakepoint-desktop) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include maxWidth(96.1rem);
+            grid-template-columns: repeat(10, 4.65vw);
+            justify-content: end;
+            gap: 3.2rem;
+        }
+    }
+}
+
+.card {
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+    box-shadow: 16px 32px 56px 0px map-get($clr, shadow-500);
+
+    @include minScreenSize($brakepoint-tablet) {
+        padding: 3.2rem;
+        grid-column: span 2;
+    }
+
+    &__header{
+        display: flex;
+        gap: 1.6rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@include minScreenSize($brakepoint-tablet) {
+    .card:nth-of-type(5) {
+        grid-column: 2/span 2;
+    }
+}
+
+@include minScreenSize($brakepoint-desktop) {
+    .card:nth-of-type(1) {
+        grid-row: 1;
+        grid-column: 6 / span 4;
+    }
+    .card:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: 3 / span 4;
+    }
+    .card:nth-of-type(3) {
+        grid-row: 2;
+        grid-column: 7 / span 4;
+    }
+    .card:nth-of-type(4) {
+        grid-row: 3;
+        grid-column: 1 / span 4;
+    }
+    .card:nth-of-type(5) {
+        grid-row: 3;
+        grid-column: 5 / span 4;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@font-face {
+    font-family: "inter";
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+    font-weight: 100 900;
+}
+
+.bold {
+    font-weight: $fw-bold;
+}
+
+.c-white {
+    color: map-get($clr , primary);
+}
+
+.label-s {
+    font-size: map-get($fs , fs-s);
+    font-style: normal;
+    line-height: 2.1rem;
+    color: map-get($clr , neutral-400);
+}
+
+.input-font {
+    font-size: map-get($fs, fs-ml);
+    font-weight: $fw-bold;
+    letter-spacing: -.12rem;
+    color: map-get($clr , neutral-200);
+}
+
+.label-l {
+    font-size: map-get($fs , fs-m);
+    font-weight: $fw-bold;
+    font-style: normal;
+    line-height: 2.4rem;
+    color: map-get($clr , neutral-200);
+}
+
+p {
+    font-size: map-get($fs, fs-m);
+    font-style: normal;
+    line-height: 2.4rem;
+    color: map-get($clr, neutral-400);
+}
+
+.p-s {
+    font-size: map-get($fs, fs-s);
+    font-style: normal;
+    line-height: 2.1rem;
+    color: map-get($clr, primary);
+}
+
+h1 {
+    font-size: map-get($fs, fs-xxl);
+    font-style: normal;
+    font-weight: $fw-bold;
+    line-height: 5.28rem;
+    letter-spacing: -.24rem;
+    color: map-get($clr, neutral-200);
+
+    @include minScreenSize($brakepoint-desktop) {
+        font-size: map-get($fs, fs-xxxl);
+        line-height: 7.04rem;
+        letter-spacing: -.32rem;
+    }
+}
+
+h2 {
+    font-size: map-get($fs, fs-xl);
+    font-style: normal;
+    font-weight: $fw-bold;
+    line-height: 3.52rem;
+    letter-spacing: -.16rem;
+    color: map-get($clr, neutral-200);
+
+    @include minScreenSize($brakepoint-desktop) {
+        font-size: map-get($fs, fs-xxl);
+        line-height: 5.28rem;
+        letter-spacing: -.24rem;
+    }
+}
+
+h3 {
+    font-size: map-get($fs, fs-l);
+    font-style: normal;
+    font-weight: $fw-bold;
+    line-height: normal;
+    letter-spacing: -.12rem;
+    color: map-get($clr, neutral-200);
+}

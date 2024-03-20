@@ -33,10 +33,6 @@
   - [Destructuring props](#destructuring-props)
   - [propTypes](#proptypes)
   - [defaultProps](#defaultprops)
-- [Exercises: Components and Props](#exercises-components-and-props)
-  - [Exercises: Level 1](#exercises-level-1)
-  - [Exercises: Level 2](#exercises-level-2)
-  - [Exercises: Level 3](#exercises-level-3)
 
 # Props
 
