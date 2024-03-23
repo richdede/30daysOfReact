@@ -14,6 +14,10 @@
 
 <br />
 
+### Demo Screeshots
+
+![Site Desktop Demo](./color.png "Desktop Demo")
+
 - [States](#states)
   - [What is State?](#what-is-state)
   - [How to set a state](#how-to-set-a-state)
