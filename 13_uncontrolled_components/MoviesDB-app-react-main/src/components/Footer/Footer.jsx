@@ -56,7 +56,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            &copy; 2023 <span className="copyright-link">movieshub</span>. All Rights Reserved
+            &copy; 2024 <span className="copyright-link">movieshub</span>. All Rights Reserved
           </p>
           <p className="faq">FAQs</p>
         </div>
