@@ -1,0 +1,12 @@
+#map {
+  width: 100vw;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  top: 280px;
+}
+@media screen and (max-width: 890px) {
+  #map {
+    height: 650px;
+  }
+}/*# sourceMappingURL=Map.css.map */

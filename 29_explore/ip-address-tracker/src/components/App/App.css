@@ -1,0 +1,20 @@
+*, *::before, *::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("/public/images/pattern-bg-desktop.png") no-repeat;
+  background-size: 100vw 280px;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  margin: 5vh auto 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  font-weight: 500;
+}/*# sourceMappingURL=App.css.map */

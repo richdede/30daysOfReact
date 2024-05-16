@@ -1,0 +1,73 @@
+.container{
+    display: flex;
+    width: 1110px;
+    margin: auto;
+}
+
+.content{
+    width: 540px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.loadingIcon{
+    align-self: center;
+}
+
+.refresh{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: -26px;
+    mask-image:url('./icons/icon-refresh.svg');
+    -webkit-mask-image: url('./icons/icon-refresh.svg');
+    mask-size: 16px 16px;
+    -webkit-mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.refresh:hover{
+    background-color: #FFFFFF;
+}
+
+.quote{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: white;
+}
+
+.quoteAuthor{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: white;
+}
+
+@media(max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px){
+    .container{
+        top: 32px;
+    }
+    
+    .content{
+        width: 70%;
+    }
+    .quote, .quoteAuthor{
+        font-size: 12px;
+        line-height: 22px;
+    }
+}

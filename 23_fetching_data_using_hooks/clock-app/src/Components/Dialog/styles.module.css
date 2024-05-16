@@ -1,0 +1,128 @@
+.container{
+    overflow-x: hidden;
+    height: 0px;
+    backdrop-filter: blur(20.3871px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+}
+
+.content{
+    width: 1110px;
+    display: grid;
+    min-height: 252px;
+    align-content: space-between;
+    grid-template-columns: 420px 1px auto;
+    row-gap: 42px;
+    column-gap: 94px;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;                            
+    width: 8px;                                           
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #303030;
+    border-radius: 14px;
+}
+
+.userData{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.userData:nth-child(5){
+    grid-column: 3/4;
+}
+
+.title{
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.data{
+    word-wrap: break-word;
+    font-size: 56px;
+    line-height: 67.77px;
+    font-weight: 700;
+}
+
+.line{
+    width: 1px;
+    height: 100%;
+    opacity: 0.25;
+    background-color: #303030;
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+
+@media(max-width: 1200px){
+    .content{
+        width: 90%
+    }
+}
+
+@media(max-width: 900px) {
+    .title{
+        font-size: 13px;
+        letter-spacing: 2.6px;
+    }
+
+    .data{
+        font-size: 40px;
+        line-height: 48.41px;
+    }
+
+    .content{
+        grid-template-columns: 55% 25%;
+        justify-content: space-between;
+        grid-template-rows: repeat(2, 77px);        
+        column-gap: 40px;     
+    }
+
+    .line{
+        display: none;
+    }
+
+    .userData:nth-child(5){
+        grid-column: initial;
+    }
+}
+
+
+@media(max-width: 600px){
+    .content{
+        min-height: 160px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 28px);   
+        row-gap: 16px;
+        padding: 0px;
+    }
+
+    .userData:nth-child(5){
+        padding-bottom: 0px;
+    }
+    .userData{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title{
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .data{
+        font-size: 20px;
+        line-height: 24.2px;
+        text-align: right;
+    }
+}

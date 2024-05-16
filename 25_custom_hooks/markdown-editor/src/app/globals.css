@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown {
+  @apply font-robotoSlab;
+}
+
+html {
+  @apply bg-1000;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown blockquote p {
+  @apply text-700;
+}
+.markdown p,
+.markdown li {
+  @apply text-previewParagraph;
+}
+.markdown li:not(:last-child) {
+  @apply mb-1;
+}
+.markdown ol {
+  @apply ml-8;
+}
+.markdown ul {
+  @apply ml-10;
+}
+
+.markdown ol li {
+  @apply ml-2 pl-1;
+}
+
+.markdown ol {
+  @apply list-decimal;
+}
+
+.markdown ul {
+  @apply marker:text-orange;
+}
+
+.markdown ul li {
+  @apply list-disc;
+}
+.markdown p code {
+  @apply text-500 font-robotoMono;
+}
+.markdown .lightMode p code {
+  @apply text-100 font-robotoMono;
+}
+
+.markdown blockquote {
+  @apply p-6 border-l-[4px] border-l-orange bg-200;
+}
+.markdown blockquote p {
+  @apply text-previewParagraphBold;
+}
+pre code {
+  @apply font-robotoMono;
+}
+
+.markdown .lightMode pre {
+  @apply p-6 bg-800 text-100;
+}
+.markdown pre {
+  @apply p-6 bg-200 text-700 whitespace-pre-wrap;
+}
+.markdown .lightMode h1,
+.markdown .lightMode h2,
+.markdown .lightMode h3,
+.markdown .lightMode h4,
+.markdown .lightMode h5,
+.markdown .lightMode blockquote p {
+  @apply text-100;
+}
+.markdown a {
+  @apply underline;
+}
+
+.markdown .lightMode blockquote {
+  @apply bg-800;
+}
+
+.markdown h1 {
+  @apply text-previewH1;
+}
+.markdown h2 {
+  @apply text-previewH2;
+}
+.markdown h3 {
+  @apply text-previewH3;
+}
+.markdown h4 {
+  @apply text-previewH4;
+}
+.markdown h5 {
+  @apply text-previewH5;
+}
+.markdown h6 {
+  @apply text-previewH6 text-orange;
+}

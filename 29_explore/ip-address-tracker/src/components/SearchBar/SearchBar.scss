@@ -1,0 +1,77 @@
+@mixin mobile(){
+    @media screen and (max-width:890px){
+        @content
+    }
+}
+
+.search-bar {
+    position: relative;
+    margin: 4vh auto 0;
+    width: 35%;
+    border-radius: 10px;
+    overflow: hidden;
+    @include mobile(){
+        width: 80%;
+    }
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 10px;
+    width: 100%;
+    padding: 1em;
+    font-size: 1.125rem;
+    font-family: inherit;
+    color: hsl(0, 0%, 17%);
+
+    &::placeholder {
+        color: hsl(0, 0%, 59%);
+    }
+    @include mobile(){
+        font-size: 12px;
+    }
+}
+
+button {
+    background-color: black;
+    height: 100%;
+    padding: 1.25em;
+    position: absolute;
+    transform: translateX(-100%);
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.validation-msg {
+    background-color: white;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+    width: 35%;
+    margin: 0.5em auto 4vh;
+    font-size: 0.75rem;
+    color: red;
+    @include mobile(){
+        width: 80%;
+        margin-bottom: 2vh;
+    }
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.unhide {
+    visibility: visible;
+}
+.red{
+    border: 2px solid red;
+}
