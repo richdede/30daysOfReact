@@ -43,10 +43,6 @@ Users should be able to:
 
 ![Frontend In-browser markdown editor screenshot](../screenshot.jpeg)
 
-### Links
-
-- Solution URL: [https://github.com/kamiliano1/in-browser-markdown-editor](https://github.com/kamiliano1/in-browser-markdown-editor)
-- Live Site URL: [https://in-browser-markdown-editor-omega.vercel.app/](https://in-browser-markdown-editor-omega.vercel.app/)
 
 ## My process
 
