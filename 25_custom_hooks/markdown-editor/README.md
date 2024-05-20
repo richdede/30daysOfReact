@@ -1,3 +1,10 @@
+<div align="center">
+  
+[![Twitter Follow](https://img.shields.io/twitter/follow/iamt_toby?style=social)](https://twitter.com/intent/follow?screen_name=iamt_toby)
+[![GitHub Follow](https://img.shields.io/github/followers/richdede?label=Follow&style=social)](https://github.com/richdede)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/dee-prince-dede-970913217/)
+[![Instagram Follow](https://img.shields.io/badge/Instagram-Follow-ff69b4?style=social&logo=instagram)](https://www.instagram.com/iamt_toby/)
+
 # Frontend Mentor - In-browser markdown editor solution
 
 This is a solution to the [In-browser markdown editor challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/inbrowser-markdown-editor-r16TrrQX9). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
@@ -16,9 +23,6 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
       - [React Recoil](#react-recoil)
       - [React-markdown](#react-markdown)
       - [Radix-UI](#radix-ui)
-    - [Continued development](#continued-development)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -37,7 +41,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Frontend In-browser markdown editor screenshot](./screenshot.jpeg)
+![Frontend In-browser markdown editor screenshot](../screenshot.jpeg)
 
 ### Links
 
@@ -102,18 +106,3 @@ To improve accessibility:
 - radix-ui/react-dialog - delete markdown modal
 - radix-ui/react-navigation-menu - navbar and sidebar with keyboard navigation
 
-### Continued development
-
-- Finish this project as full-stack with logging features,
-- load and save markdown from and to the file,
-- implement different color palettes,
-
-## Author
-
-- Website - [Kamil Szymon](https://github.com/kamiliano1)
-- Frontend Mentor - [@kamiliano1](https://www.frontendmentor.io/profile/kamiliano1)
-- Twitter - [@k_p_szymon](https://twitter.com/k_p_szymon)
-
-## Acknowledgments
-
-I had problems with implementing table of contents and clickable heading. I've used the solution provided by [sobelk](https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de)

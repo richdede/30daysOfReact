@@ -14,7 +14,7 @@
 
 ### Demo Screeshots
 
-![Site Desktop Demo](./thumbnail.png "Desktop Demo")
+![Site Desktop Demo](./screenshot.jpeg "Desktop Demo")
 
 <br />
 
