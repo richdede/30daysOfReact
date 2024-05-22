@@ -1,8 +1,19 @@
+<div align="center">
+  
+[![Twitter Follow](https://img.shields.io/twitter/follow/iamt_toby?style=social)](https://twitter.com/intent/follow?screen_name=iamt_toby)
+[![GitHub Follow](https://img.shields.io/github/followers/richdede?label=Follow&style=social)](https://github.com/richdede)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/dee-prince-dede-970913217/)
+[![Instagram Follow](https://img.shields.io/badge/Instagram-Follow-ff69b4?style=social&logo=instagram)](https://www.instagram.com/iamt_toby/)
+
+  <br />
+  <br />
+
+
 # Qr Code Generator with color theme switcher
 
 This app generates Qr Code based on the entered URL. It is also possible to customize and download the generated Qr Code
 
-![Qr Code Generator](./screenshot-dark.webp)
+![Qr Code Generator](./screenshot-dark.png)
 
 
 ## Table of contents
@@ -16,18 +27,16 @@ This app generates Qr Code based on the entered URL. It is also possible to cust
   - [System Requirements](#system-requirements)
   - [Installation](#installation)
   - [Bugs](#bugs)
-  - [Contributing](#contributing)
-- [License](#license)
 
 ## About App
 
 This app generates Qr Code based on the url entered
 
-![Qr Code Generator](./screenshot-light.webp)
+![Qr Code Generator](./screenshot-light.png)
 
 Features:
 - Light / dark mode theme switcher
-- Qr Code 'travolgi.com' default on loading
+- Qr Code 'dee-virid.vercel.app' default on loading
 - Dynamically generating the Qr Code as you type the URL
 - Dynamically update the color and background of the Qr Code based on the customization input entered by the user
 - Dynamically update the customized image of the Qr Code
@@ -98,13 +107,4 @@ If requirements above are not installed in your computer, you'll need to install
 
 Please feel free to create an issue if you see a bug or something unexpected in the app.
 
-### Contributing
 
-- Fork the Project
-- Create your Feature Branch (`git checkout -b feature/yourFeature`)
-- Commit your Changes (`git commit -m 'Brief explanation of feature`')
-- Push to the Branch (`git push origin feature/yourFeature`)
-- Open a Pull Request
-
-## License 
-[MIT license](https://github.com/travolgi/react-qrcode-generator/blob/master/LICENSE)
